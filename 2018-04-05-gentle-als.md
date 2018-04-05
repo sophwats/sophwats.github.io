@@ -5,10 +5,8 @@ A successful recommendation engine is one which provides accurate and personalis
 In this post I'll give you a gentle introduction to one such collaborative filtering algorithm - Alternating Least Squares, or ALS for short. Through a gentle example you will get a feel for what alternating least squares is doing. _Disclaimer: We are going to do a simplified ALS to give you a feeling for what is going on, rather than pushing you into a deep, deep pool of mathematics and greek letters._
 
 Consider the following matrix which holds opinions of two users on three products:
-No scaling, with HTML <img src="https://sophwats.github.com/images/RowsColsLabR.png" width="100">
 
-
-![Image of Standard Matrix](https://sophwats.github.com/images/RowsColsLabR.png =250x){:height="700px" width="400px"}
+<img src="https://sophwats.github.com/images/RowsColsLabR.png" width="400">
 
  We wish to be able to predict how user 1 will rate product two. This is where Alternating Least Squares comes in.
 
