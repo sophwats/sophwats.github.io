@@ -6,7 +6,7 @@ In this post I'll give you a gentle introduction to one such collaborative filte
 
 Consider the following matrix which holds opinions of two users on three products:
 
-![Image of Standard Matrix](https://sophwats.github.com/images/RowsColsLabR.png){:height="700px" width="400px"}
+![Image of Standard Matrix](https://sophwats.github.com/images/RowsColsLabR.png =250x){:height="700px" width="400px"}
 
  We wish to be able to predict how user 1 will rate product two. This is where Alternating Least Squares comes in.
 
