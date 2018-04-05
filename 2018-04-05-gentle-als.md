@@ -42,6 +42,8 @@ and
 
 From this, we get our first estimate of P:
 
+<img src="https://sophwats.github.com/images/FirstP.png" width="400" class="center">
+
 
 Now we keep P fixed and optimise for matrix U. This similarly gives us the following equations for U:
 
@@ -51,6 +53,7 @@ We can then minimise mean squared error to solve for u_1 and u_2, as we did in e
 
 Repeating this process we will, at some point, converge upon the optimal matrices U and P. In this example, after 20 iterations we find that U and P are given by:
 
+<img src="https://sophwats.github.com/images/finalUP.png" width="400" class="center">
 
 Thus we are now able to predict what user 1 thinks of product 2. By multiplying the first component of U by the second component of P we reach an estimate of 1.897.
 
