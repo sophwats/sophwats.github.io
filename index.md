@@ -4,4 +4,4 @@ I'm blogging little things I find interesting on my journey through work.
 
 [Twitter](http://www.twitter.com/sophwats)
 
-## [A gentle intoduction to Alternating Least Squares](2018-04-04-gentle-als.md)
+### [A gentle intoduction to Alternating Least Squares](2018-04-05-gentle-als.md)
