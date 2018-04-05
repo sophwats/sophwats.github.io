@@ -6,7 +6,7 @@ In this post I'll give you a gentle introduction to one such collaborative filte
 
 Consider the following matrix which holds opinions of two users on three products:
 
-<img src="https://sophwats.github.com/images/RowsColsLabR.png" width="400" class="center">
+![Image of Standard Matrix](https://sophwats.github.com/images/RowsColsLabR.png)<!-- .element height="50%" width="50%" -->
 
  We wish to be able to predict how user 1 will rate product two. This is where Alternating Least Squares comes in.
 
@@ -22,38 +22,40 @@ The 'least squares' bit of ALS comes into play when we find the 'optimal' matric
 
 Let's run through the first couple of steps by hand. For simplicity, I'm ignoring the term which prevents overfitting. I'm also making the choice that the number of features U and P is one. This corresponds to the number of columns in U, and rows in P. (In practise for a non-trivial example you will likely want a larger number of features. We will look at tuning for the optimal number of features in a future post.)
 
-So our aim is to find matrices U and P such that:
+So our aim is to find u_1, u_2, p_1, p_2 and p_3 such that:
 
-<img src="https://sophwats.github.com/images/Factored.png" width="400" class="center">
+![Image of R = UP](https://sophwats.github.com/images/Factored.png)
 
 We start by fixing matrix U. I could have picked any values for U, but I chose 1's to make the maths easier.
 
-<img src="https://sophwats.github.com/images/Uis1.png" width="400" class="center">
+![Image of R = UP with the 1s in](https://sophwats.github.com/images/Uis1.png)
 
-If we multiply this out, we get 5 equations which involve the components of P:
+If we multiply this out, we get 5 equations which involve p_1, p_2 and p_3:
 
-<img src="https://sophwats.github.com/images/pvals.png" width="400" class="center">
+![Image of p equations](https://sophwats.github.com/images/pvals.png)
 
 There is a lone equation which minimised p_2, so we set p_2 = 3. We need to select p_1 and p_3 such that the mean squared error of these equations are minimised. Thus we compute:
 
-<img src="https://sophwats.github.com/images/optp1.png" width="400" class="center">
+![Image of the msep1](https://sophwats.github.com/images/optp1.png)
 and
-<img src="https://sophwats.github.com/images/opt2.png" width="400" class="center">
+![Image of the msep3](https://sophwats.github.com/images/optp3.png)
 
 From this, we get our first estimate of P:
 
 
 Now we keep P fixed and optimise for matrix U. This similarly gives us the following equations for U:
 
-<img src="https://sophwats.github.com/images/uvals.png" width="400" class="center">
+![Image of the uvals](https://sophwats.github.com/images/uvals.png)
+
 
 We can then minimise mean squared error to solve for u_1 and u_2, as we did in equations (6) and (7).
 
 Repeating this process we will, at some point, converge upon the optimal matrices U and P. In this example, after 20 iterations we find that U and P are given by:
 
 
-Thus we are now able to predict what user 1 thinks of product 2 by u_1 /times p_2 = .
+Thus we are now able to predict what user 1 thinks of product 2. By multiplying the first component of U by the second component of P we reach an estimate of 1.897.
 
 # Disclaimers:
 1. I ignored the regularisation term. In practise, you always want to prevent overfitting when you are fitting a model to data.
-2. This is a very simple example. Usually, for non trivial matrices R,s the minimisation is tricky.
+2. This is a very simple example. Usually, for non trivial ratings matrices the minimisation is tricky.
+3. This decomposition of the original matrix into matrices U and P is not exact - when you multiply U and P together you will not recover the exact ratings matrix. This needs to be taken into account when designing applications. (Don't worry - we'll talk about that another day.)
