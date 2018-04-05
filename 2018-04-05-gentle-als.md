@@ -1,16 +1,16 @@
 # A gentle introduction to Alternating Least Squares
 
-A successful recommendation engine is one which provides accurate and personalised predictions to users in a timely manner. Such systems are of increasing commercial importance. Collaborative Filtering algorithms capture the commonality between users in order to make recommendations.
+A successful recommendation engine is one which provides accurate and personalised predictions to users in a timely manner. Such systems are of increasing commercial importance. Collaborative Filtering algorithms allow us to give predictions by capturing the commonality between users.s
 
-In this post I'll give you a gentle introduction to one such collaborative filtering algorithm - Alternating Least Squares. Through a gentle example you will get a feel for what alternating least squares is doing. _Disclaimer: We are going to do a simplified ALS to give you a feeling for what is going on, rather than pushing you into a deep, deep pool of mathematics and greek letters._
+In this post I'll give you a gentle introduction to one such collaborative filtering algorithm - Alternating Least Squares, or ALS for short. Through a gentle example you will get a feel for what alternating least squares is doing. _Disclaimer: We are going to do a simplified ALS to give you a feeling for what is going on, rather than pushing you into a deep, deep pool of mathematics and greek letters._
 
 Consider the following matrix which holds opinions of two users on three products:
 
-![Image of Standard Matrix](https://sophwats.github.com/images/RowsColsLabR.png)
+![Image of Standard Matrix](https://sophwats.github.com/images/RowsColsLabR.png | width = 100)
 
  We wish to be able to predict how user 1 will rate product two. This is where Alternating Least Squares comes in.
 
-Let R denote the original ratings matrix. Then the goal of Alternating Least Squares is to find two matrices, U and P, such that their product is approximately equal to the original matrix. Once such matrices have been found, we are able to predict what user i will think of product j by multiplying row i of U with row j of P.
+The goal of Alternating Least Squares is to find two matrices, U and P, such that their product is approximately equal to the original matrix of users and products. Once such matrices have been found, we are able to predict what user i will think of product j by multiplying row i of U with row j of P.
 
 ## Computing U and P through ALS.
 
