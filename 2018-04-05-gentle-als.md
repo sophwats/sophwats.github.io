@@ -34,7 +34,7 @@ If we multiply this out, we get 5 equations which involve the components of P:
 
 <img src="https://sophwats.github.com/images/pvals.png" width="400" class="center">
 
-There is a lone equation which minimised p_2, so we set p_2 = 3. We need to select p_1 and p_3 such that the mean squared error of these equations are minimised. Thus we compute:
+There is a lone equation which governs the second component of P, thus we set that equal to 3. We need to select the remaining two components such that the mean squared error is minimised. Thus we compute:
 
 <img src="https://sophwats.github.com/images/optp1.png" width="400" class="center">
 and
@@ -49,7 +49,7 @@ Now we keep P fixed and optimise for matrix U. This similarly gives us the follo
 
 <img src="https://sophwats.github.com/images/uvals.png" width="400" class="center">
 
-We can then minimise mean squared error to solve for u_1 and u_2, as we did in equations (6) and (7).
+We can then minimise mean squared error to solve for the components of U, as we did for P in equations (6) and (7).
 
 Repeating this process we will, at some point, converge upon the optimal matrices U and P. In this example, after 20 iterations we find that U and P are given by:
 
