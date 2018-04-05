@@ -22,31 +22,30 @@ The 'least squares' bit of ALS comes into play when we find the 'optimal' matric
 
 Let's run through the first couple of steps by hand. For simplicity, I'm ignoring the term which prevents overfitting. I'm also making the choice that the number of features U and P is one. This corresponds to the number of columns in U, and rows in P. (In practise for a non-trivial example you will likely want a larger number of features. We will look at tuning for the optimal number of features in a future post.)
 
-So our aim is to find u_1, u_2, p_1, p_2 and p_3 such that:
+So our aim is to find matrices U and P such that:
 
-![Image of R = UP](https://sophwats.github.com/images/Factored.png)
+<img src="https://sophwats.github.com/images/Factored.png" width="400" class="center">
 
 We start by fixing matrix U. I could have picked any values for U, but I chose 1's to make the maths easier.
 
-![Image of R = UP with the 1s in](https://sophwats.github.com/images/Uis1.png)
+<img src="https://sophwats.github.com/images/Uis1.png" width="400" class="center">
 
-If we multiply this out, we get 5 equations which involve p_1, p_2 and p_3:
+If we multiply this out, we get 5 equations which involve the components of P:
 
-![Image of p equations](https://sophwats.github.com/images/pvals.png)
+<img src="https://sophwats.github.com/images/pvals.png" width="400" class="center">
 
 There is a lone equation which minimised p_2, so we set p_2 = 3. We need to select p_1 and p_3 such that the mean squared error of these equations are minimised. Thus we compute:
 
-![Image of the msep1](https://sophwats.github.com/images/optp1.png)
+<img src="https://sophwats.github.com/images/optp1.png" width="400" class="center">
 and
-![Image of the msep3](https://sophwats.github.com/images/optp3.png)
+<img src="https://sophwats.github.com/images/optp2.png" width="400" class="center">
 
 From this, we get our first estimate of P:
 
 
 Now we keep P fixed and optimise for matrix U. This similarly gives us the following equations for U:
 
-![Image of the uvals](https://sophwats.github.com/images/uvals.png)
-
+<img src="https://sophwats.github.com/images/uvals.png" width="400" class="center">
 
 We can then minimise mean squared error to solve for u_1 and u_2, as we did in equations (6) and (7).
 
