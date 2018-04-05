@@ -38,7 +38,7 @@ There is a lone equation which minimised p_2, so we set p_2 = 3. We need to sele
 
 <img src="https://sophwats.github.com/images/optp1.png" width="400" class="center">
 and
-<img src="https://sophwats.github.com/images/optp3.png" width="400" class="center">
+<img src="https://sophwats.github.com/images/opt2.png" width="400" class="center">
 
 From this, we get our first estimate of P:
 
