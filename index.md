@@ -5,3 +5,5 @@ I'm blogging little things I find interesting on my journey through work.
 [Twitter](http://www.twitter.com/sophwats)
 
 ### [A gentle intoduction to Alternating Least Squares](2018-04-05-gentle-als.md)
+
+### [From research to production: What they didn't teach you at Grad School](2018-22-10-research-to-production.md)
