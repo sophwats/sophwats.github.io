@@ -10,4 +10,4 @@ In both my PhD and in my job, the biggest constraint I come across is time - dea
 
 Below is a recording from a talk I gave at Berlin Buzzwords 2018, where I talked about the ideas above in the context of building a recommendation engine.
 
-[![From Research to Production - What they didn't teach you in Grad School](https://sophwats.github.com/images/BerlinBuzzwordsStill.png)](https://youtu.be/s3WbEfoxRjs "From Research to Production - What they didn't teach you in Grad School")
+[![From Research to Production - What they didn't teach you in Grad School](https://sophwats.github.com/images/BerlinBuzzwordsStill2.png)](https://youtu.be/s3WbEfoxRjs "From Research to Production - What they didn't teach you in Grad School")
