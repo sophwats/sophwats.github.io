@@ -6,7 +6,7 @@ In this post I'll give you a gentle introduction to one such collaborative filte
 
 Consider the following matrix which holds opinions of two users on three products:
 
-<img src="https://sophwats.github.com/images/RowsColsLabR.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/RowsColsLabR.png" width="400" class="center">
 
  We wish to be able to predict how user 1 will rate product two. This is where Alternating Least Squares comes in.
 
@@ -24,36 +24,36 @@ Let's run through the first couple of steps by hand. For simplicity, I'm ignorin
 
 So our aim is to find matrices U and P such that:
 
-<img src="https://sophwats.github.com/images/Factored.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/Factored.png" width="400" class="center">
 
 We start by fixing matrix U. I could have picked any values for U, but I chose 1's to make the maths easier.
 
-<img src="https://sophwats.github.com/images/Uis1.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/Uis1.png" width="400" class="center">
 
 If we multiply this out, we get 5 equations which involve the components of P:
 
-<img src="https://sophwats.github.com/images/pvals.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/pvals.png" width="400" class="center">
 
 There is a lone equation which governs the second component of P, thus we set that equal to 3. We need to select the remaining two components such that the mean squared error is minimised. Thus we compute:
 
-<img src="https://sophwats.github.com/images/optp1.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/optp1.png" width="400" class="center">
 and
-<img src="https://sophwats.github.com/images/opt2.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/opt2.png" width="400" class="center">
 
 From this, we get our first estimate of P:
 
-<img src="https://sophwats.github.com/images/FirstP.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/FirstP.png" width="400" class="center">
 
 
 Now we keep P fixed and optimise for matrix U. This similarly gives us the following equations for U:
 
-<img src="https://sophwats.github.com/images/uvals.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/uvals.png" width="400" class="center">
 
 We can then minimise mean squared error to solve for the components of U, as we did for P in equations (6) and (7).
 
 Repeating this process we will, at some point, converge upon the optimal matrices U and P. In this example, after 20 iterations we find that U and P are given by:
 
-<img src="https://sophwats.github.com/images/finalUP.png" width="400" class="center">
+<img src="https://sophwats.github.io/images/finalUP.png" width="400" class="center">
 
 Thus we are now able to predict what user 1 thinks of product 2. By multiplying the first component of U by the second component of P we reach an estimate of 1.897.
 
