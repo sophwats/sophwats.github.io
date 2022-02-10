@@ -6,4 +6,4 @@ I introduce the Implicit ALS algorithm, and show that, by splitting the recommen
 
 This talk was given at Spark and AI Summit Europe 2018.
 
-[![Building an Implicit Recommendation Engine with Spark](https://sophwats.github.com/images/SparkSummitStill.png)](https://youtu.be/58OjaDH2FI0 "Building an Implicit Recommendation Engine with Spark")
+[![Building an Implicit Recommendation Engine with Spark](https://sophwats.github.io/images/SparkSummitStill.png)](https://youtu.be/58OjaDH2FI0 "Building an Implicit Recommendation Engine with Spark")
