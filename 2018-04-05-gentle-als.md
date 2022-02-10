@@ -1,6 +1,6 @@
 # A gentle introduction to Alternating Least Squares
 
-A successful recommendation engine is one which provides accurate and personalised predictions to users in a timely manner. Such systems are of increasing commercial importance. Collaborative Filtering algorithms allow us to give predictions by capturing the commonality between users.s
+A successful recommendation engine is one which provides accurate and personalised predictions to users in a timely manner. Such systems are of increasing commercial importance. Collaborative Filtering algorithms allow us to give predictions by capturing the commonality between users.
 
 In this post I'll give you a gentle introduction to one such collaborative filtering algorithm - Alternating Least Squares, or ALS for short. Through a gentle example you will get a feel for what alternating least squares is doing. _Disclaimer: We are going to do a simplified ALS to give you a feeling for what is going on, rather than pushing you into a deep, deep pool of mathematics and greek letters._
 
